@@ -1,931 +1,242 @@
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
-    <!-- Facebook sharing information tags -->
-    <meta property="og:title" content="*|MC:SUBJECT|*" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>*|MCLSUBJECT|*</title>
+    <style type="text/css" media="screen">
+      body {
+        background-color: #F0EEE9;
+        text-align:center;
+        font-family: Arial;
+      }
 
-    <title>*|MC:SUBJECT|*</title>
-    <style type="text/css">
+      #border {
+        background-color; #000000;
 
-      /* Client-specific Styles */
-      #outlook a{padding:0;} /* Force Outlook to provide a "view in browser" button. */
-      body{width:100% !important;} /* Force Hotmail to display emails at full width */
-      body{-webkit-text-size-adjust:none;} /* Prevent Webkit platforms from changing default text sizes. */
+        padding: 5px;
+        margin: 10px auto;
 
-      /* Reset Styles */
-      body{margin:0; padding:0;}
-      img{border:none; font-size:14px; font-weight:normal; height:auto; line-height:100%; outline:none; text-decoration:none; text-transform:capitalize;}
-      #backgroundTable{height:100% !important; margin:0; padding:0; width:100% !important;}
+        border: 2px dotted #999999;
+      }
 
-      a:link, a:visited {
+      #layout {
+        background:#ffffff;
+        text-align:left;
+      }
+
+      #header {
+        padding-left: 20px;
+      }
+
+      #locationsList {
+        color: #E4811C;
+
+        font-size: 12px;
+        font-weight: normal;
+
+        text-align: left;
+        text-decoration: none;
+      }
+
+      #locationsList ul {
+        list-style-type: none;
+      }
+
+      #content {
+        padding: 20px 20px 10px 20px;
+      }
+
+      #columncontainer {
+        color: #7C6A57;
+        font-size: 13px;
+
+        line-height: 125%;
+
+        text-align: left;
+      }
+
+      .column {
+        vertical-align: top;
+        width: 191px;
+      }
+
+      .column ul {
+      }
+
+      .column li {
+      }
+
+      #firstColumn {
+        border-right-width: 2px;
+        border-right-style: dotted;
+        border-right-color: #a9968a;
+      }
+
+      #secondColumn {
+        border-right-width: 2px;
+        border-right-style: dotted;
+        border-right-color: #a9968a;
+      }
+
+      #thirdColumn {
+      }
+
+      .listTitle {
+        color: #E4811C;
+
+        display: inline;
+      }
+
+      .name {
+        font-weight: bold;
+
+        margin-left: 10px;
+
+        display: inline;
+      }
+
+      .name a {
         color: #336699;
       }
 
-      /* Template Styles */
+      #footer {
+        color: #BFB6AB;
 
-      /* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: COMMON PAGE ELEMENTS /\/\/\/\/\/\/\/\/\/\ */
+        font-size: 10px;
 
-      /**
-      * @tab Page
-      * @section background color
-      * @tip Set the background color for your email. You may want to choose one that matches your company's branding.
-      * @theme page
-      */
-      body, #backgroundTable{
-        /*@editable*/ background-color:#f0eee9;
-        color: #7C6A57;
+        text-align: center;
       }
 
-      #borderTable {
-        /*@editable*/ border: 2px dotted #FFFFFF;
-	
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-left: 5px;
-        padding-right: 5px;
-        width: 600px;
+      #footer a {
+        color: #BFB6AB;
+
+        font-weight: normal;
+
+        text-decoration: none;
+        text-align: center;
       }
 
-      #columnsContainer {
-	      margin-left: auto;
-	      margin-right: auto;
-      }
-
-      /**
-      * @tab Page
-      * @section email border
-      * @tip Set the border for your email.
-      */
-      #templateContainer{
-      }
-
-      /**
-      * @tab Page
-      * @section heading 1
-      * @tip Set the styling for all first-level headings in your emails. These should be the largest of your headings.
-      * @style heading 1
-      */
-      h1, .h1{
-        /*@editable*/ color:#202020;
-        display:block;
-        /*@editable*/ font-family:Arial;
-        /*@editable*/ font-size:34px;
-        /*@editable*/ font-weight:normal;
-        /*@editable*/ line-height:100%;
-        margin-top:0;
-        margin-right:0;
-        margin-bottom:10px;
-        margin-left:0;
-        /*@editable*/ text-align:left;
-      }
-
-      /**
-      * @tab Page
-      * @section heading 2
-      * @tip Set the styling for all second-level headings in your emails.
-      * @style heading 2
-      */
-      h2, .h2{
-        /*@editable*/ color:#202020;
-        display:block;
-        /*@editable*/ font-family:Arial;
-        /*@editable*/ font-size:30px;
-        /*@editable*/ font-weight:normal;
-        /*@editable*/ line-height:100%;
-        margin-top:0;
-        margin-right:0;
-        margin-bottom:10px;
-        margin-left:0;
-        /*@editable*/ text-align:left;
-      }
-
-      /**
-      * @tab Page
-      * @section heading 3
-      * @tip Set the styling for all third-level headings in your emails.
-      * @style heading 3
-      */
-      h3, .h3{
-        /*@editable*/ color:#202020;
-        display:block;
-        /*@editable*/ font-family:Arial;
-        /*@editable*/ font-size:26px;
-        /*@editable*/ font-weight:normal;
-        /*@editable*/ line-height:100%;
-        margin-top:0;
-        margin-right:0;
-        margin-bottom:10px;
-        margin-left:0;
-        /*@editable*/ text-align:left;
-      }
-
-      /**
-      * @tab Page
-      * @section heading 4
-      * @tip Set the styling for all fourth-level headings in your emails. These should be the smallest of your headings.
-      * @style heading 4
-      */
-      h4, .h4{
-        /*@editable*/ color:#202020;
-        display:block;
-        /*@editable*/ font-family:Arial;
-        /*@editable*/ font-size:22px;
-        /*@editable*/ font-weight:normal;
-        /*@editable*/ line-height:100%;
-        margin-top:0;
-        margin-right:0;
-        margin-bottom:10px;
-        margin-left:0;
-        /*@editable*/ text-align:left;
-      }
-
-      /* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: PREHEADER /\/\/\/\/\/\/\/\/\/\ */
-
-      /**
-      * @tab Header
-      * @section preheader style
-      * @tip Set the background color for your email's preheader area.
-      * @theme page
-      */
-      #templatePreheader{
-        /*@editable*/ background-color:#f0eee9;
-      }
-
-      /**
-      * @tab Header
-      * @section preheader text
-      * @tip Set the styling for your email's preheader text. Choose a size and color that is easy to read.
-      */
-      .preheaderContent div{
-        /*@editable*/ color:#505050;
-        /*@editable*/ font-family:Arial;
-        /*@editable*/ font-size:10px;
-        /*@editable*/ line-height:100%;
-        /*@editable*/ text-align:center;
-      }
-
-      /**
-      * @tab Header
-      * @section preheader link
-      * @tip Set the styling for your email's preheader links. Choose a color that helps them stand out from your text.
-      */
-      .preheaderContent div a:link, .preheaderContent div a:visited{
-        /*@editable*/ color:#336699;
-        /*@editable*/ font-weight:normal;
-        /*@editable*/ text-decoration:underline;
-      }
-
-
-
-      /* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: HEADER /\/\/\/\/\/\/\/\/\/\ */
-
-      /**
-      * @tab Header
-      * @section header style
-      * @tip Set the background color and border for your email's header area.
-      * @theme header
-      */
-      #templateHeader{
-        /*@editable*/ border-bottom:0;
-      }
-
-      /**
-      * @tab Header
-      * @section header text
-      * @tip Set the styling for your email's header text. Choose a size and color that is easy to read.
-      */
-      .headerContent{
-        /*@editable*/ color:#e4811c;
-        /*@editable*/ font-family:Arial;
-        /*@editable*/ font-size:13px;
-        /*@editable*/ font-weight:normal;
-        /*@editable*/ line-height:125%;
-        /*@editable*/ padding:0;
-        /*@editable*/ text-align:left;
-        /*@editable*/ vertical-align:top;
-      }
-
-      /**
-      * @tab Header
-      * @section header link
-      * @tip Set the styling for your email's header links. Choose a color that helps them stand out from your text.
-      */
-      .headerContent a:link, .headerContent a:visited{
-        /*@editable*/ color:#336699;
-        /*@editable*/ font-weight:normal;
-        /*@editable*/ text-decoration:underline;
-      }
-
-      #headerImage{
-        height:auto;
-        max-width:300px;
-      }
-
-      .locationsList a:link, .locationsList a:visited {
-        /*@editable*/ color:#E4811C;
-        /*@editable*/ font-family:Arial;
-        /*@editable*/ font-size:12px;
-        /*@editable*/ font-weight:normal;
-
-        /*@editable*/ line-height:15px;
-        /*@editable*/ text-align:left;
-        /*@editable*/ text-decoration:none;
-      }
-
-      /* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: MAIN BODY & FULL-WIDTH BAND /\/\/\/\/\/\/\/\/\/\ */
-
-      /**
-      * @tab Body
-      * @section body style
-      * @tip Set the background color for your email's body area.
-      */
-      #templateContainer, .bodyContent, .fullWidthBandContent{
-        background-color: #FFF;
-	margin-left: auto;
-	margin-right: auto;
-      }
-
-      /**
-      * @tab Body
-      * @section body text
-      * @tip Set the styling for your email's main content text. Choose a size and color that is easy to read.
-      * @theme main
-      */
-      .bodyContent div, .fullWidthBandContent div{
-        /*@editable*/ color:#505050;
-        /*@editable*/ font-family:Arial;
-        /*@editable*/ font-size:14px;
-        /*@editable*/ line-height:150%;
-        /*@editable*/ text-align:left;
-      }
-
-      /**
-      * @tab Body
-      * @section body link
-      * @tip Set the styling for your email's main content links. Choose a color that helps them stand out from your text.
-      */
-      .bodyContent div a:link, .bodyContent div a:visited, .fullWidthBandContent div a:link, .fullWidthBandContent div a:visited{
-        /*@editable*/ color:#336699;
-        /*@editable*/ font-weight:normal;
-        /*@editable*/ text-decoration:underline;
-      }
-
-      .bodyContent img, .fullWidthBandContent img{
-        display:inline;
-        height:auto;
-      }
-
-      /* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: SIDEBAR /\/\/\/\/\/\/\/\/\/\ */
-
-      /**
-      * @tab Sidebar
-      * @section sidebar style
-      * @tip Set the background color for your email's sidebar area.
-      */
-      #templateSidebar{
-        /*@editable*/ background-color:#FFFFFF;
-      }
-
-      /**
-      * @tab Sidebar
-      * @section sidebar text
-      * @tip Set the styling for your email's sidebar text. Choose a size and color that is easy to read.
-      */
-      .sidebarContent div{
-        /*@editable*/ color:#505050;
-        /*@editable*/ font-family:Arial;
-        /*@editable*/ font-size:12px;
-        /*@editable*/ line-height:150%;
-        /*@editable*/ text-align:left;
-      }
-
-      /**
-      * @tab Sidebar
-      * @section sidebar link
-      * @tip Set the styling for your email's sidebar links. Choose a color that helps them stand out from your text.
-      */
-      .sidebarContent div a:link, .sidebarContent div a:visited{
-        /*@editable*/ color:#336699;
-        /*@editable*/ font-weight:normal;
-        /*@editable*/ text-decoration:underline;
-      }
-
-      .sidebarContent img{
-        display:inline;
-        height:auto;
-      }
-
-      /* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: MIDDLE COLUMNS; LEFT, RIGHT /\/\/\/\/\/\/\/\/\/\ */
-
-      /**
-      * @tab Middle Columns
-      * @section left column text
-      * @tip Set the styling for your email's left column text. Choose a size and color that is easy to read.
-      */
-      .leftMidColumnContent{
-        /*@editable*/ background-color:#FFFFFF;
-      }
-
-      /**
-      * @tab Middle Columns
-      * @section left column text
-      * @tip Set the styling for your email's left column text. Choose a size and color that is easy to read.
-      */
-      .leftMidColumnContent div{
-        /*@editable*/ color:#505050;
-        /*@editable*/ font-family:Arial;
-        /*@editable*/ font-size:14px;
-        /*@editable*/ line-height:150%;
-        /*@editable*/ text-align:left;
-      }
-
-      /**
-      * @tab Middle Columns
-      * @section left column link
-      * @tip Set the styling for your email's left column links. Choose a color that helps them stand out from your text.
-      */
-      .leftMidColumnContent div a:link, .leftMidColumnContent div a:visited{
-        /*@editable*/ color:#336699;
-        /*@editable*/ font-weight:normal;
-        /*@editable*/ text-decoration:underline;
-      }
-
-      .leftMidColumnContent img{
-        display:inline;
-        height:auto;
-      }
-
-      /**
-      * @tab Middle Columns
-      * @section right column text
-      * @tip Set the styling for your email's right column text. Choose a size and color that is easy to read.
-      */
-      .rightMidColumnContent{
-        /*@editable*/ background-color:#FFFFFF;
-      }
-
-      /**
-      * @tab Middle Columns
-      * @section right column text
-      * @tip Set the styling for your email's right column text. Choose a size and color that is easy to read.
-      */
-      .rightMidColumnContent div{
-        /*@editable*/ color:#505050;
-        /*@editable*/ font-family:Arial;
-        /*@editable*/ font-size:14px;
-        /*@editable*/ line-height:150%;
-        /*@editable*/ text-align:left;
-      }
-
-      /**
-      * @tab Middle Columns
-      * @section right column link
-      * @tip Set the styling for your email's right column links. Choose a color that helps them stand out from your text.
-      */
-      .rightMidColumnContent div a:link, .rightMidColumnContent div a:visited{
-        /*@editable*/ color:#336699;
-        /*@editable*/ font-weight:normal;
-        /*@editable*/ text-decoration:underline;
-      }
-
-      .rightMidColumnContent img{
-        display:inline;
-        height:auto;
-      }
-
-      /* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: LOWER COLUMNS; LEFT, CENTER, RIGHT /\/\/\/\/\/\/\/\/\/\ */
-
-      /**
-      * @tab Lower Columns
-      * @section left column text
-      * @tip Set the styling for your email's left column text. Choose a size and color that is easy to read.
-      */
-      .leftLowerColumnContent{
-        /*@editable*/ background-color:#FFFFFF;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        position: relative;
-      }
-
-      /**
-      * @tab Lower Columns
-      * @section left column text
-      * @tip Set the styling for your email's left column text. Choose a size and color that is easy to read.
-      */
-      .leftLowerColumnContent div{
-        /*@editable*/ font-family:Arial;
-        /*@editable*/ font-size:13px;
-        /*@editable*/ line-height:125%;
-        /*@editable*/ text-align:left;
-        border-right-width: 2px;
-        border-right-style: dotted;
-        border-right-color: #a9968a;
-        margin-top: 0px;
-        margin-right: 10px;
-        margin-bottom: 0px;
-        margin-left: 20px;
-        vertical-align: top;
-        padding: 0px;
-        width: 180px;
-      }
-
-      /**
-      * @tab Lower Columns
-      * @section left column link
-      * @tip Set the styling for your email's left column links. Choose a color that helps them stand out from your text.
-      */
-      .leftLowerColumnContent div a:link, .leftLowerColumnContent div a:visited{
-        /*@editable*/ font-weight:normal;
-        /*@editable*/ text-decoration:underline;
-      }
-
-      .leftLowerColumnContent img{
-        display:inline;
-        height:auto;
-      }
-
-      /**
-      * @tab Lower Columns
-      * @section center column text
-      * @tip Set the styling for your email's center column text. Choose a size and color that is easy to read.
-      */
-      .centerLowerColumnContent{
-        /*@editable*/ background-color:#FFFFFF;
-        border-right-width: 2px;
-        border-right-style: dotted;
-        border-right-color: #a9968a;
-      }
-
-      /**
-      * @tab Lower Columns
-      * @section center column text
-      * @tip Set the styling for your email's center column text. Choose a size and color that is easy to read.
-      */
-      .centerLowerColumnContent div{
-        /*@editable*/ font-family:Arial;
-        /*@editable*/ font-size:13px;
-        /*@editable*/ line-height:125%;
-        /*@editable*/ text-align:left;
-        padding: 0px;
-        margin-top: 0px;
-        margin-right: 10px;
-        margin-bottom: 0px;
-        margin-left: 10px;
-        width: 180px;
-      }
-
-      /**
-      * @tab Lower Columns
-      * @section center column link
-      * @tip Set the styling for your email's center column links. Choose a color that helps them stand out from your text.
-      */
-      .centerLowerColumnContent div a:link, .centerLowerColumnContent div a:visited{
-        /*@editable*/ color:#336699;
-        /*@editable*/ font-weight:normal;
-        /*@editable*/ text-decoration:underline;
-      }
-
-      .centerLowerColumnContent img{
-        display:inline;
-        height:auto;
-      }
-
-      /**
-      * @tab Lower Columns
-      * @section right column text
-      * @tip Set the styling for your email's right column text. Choose a size and color that is easy to read.
-      */
-      .rightLowerColumnContent{
-        /*@editable*/ background-color:#FFFFFF;
-        padding-left: 10px;
-      }
-
-      /**
-      * @tab Lower Columns
-      * @section right column text
-      * @tip Set the styling for your email's right column text. Choose a size and color that is easy to read.
-      */
-      .rightLowerColumnContent div{
-        /*@editable*/ font-family:Arial;
-        /*@editable*/ font-size:13px;
-        /*@editable*/ line-height:125%;
-        /*@editable*/ text-align:left;
-        margin-top: 0px;
-        margin-right: 0px;
-        margin-bottom: 0px;
-        margin-left: 10px;
-        padding-top: 0px;
-        width: 180px;
-      }
-
-      /**
-      * @tab Lower Columns
-      * @section right column link
-      * @tip Set the styling for your email's right column links. Choose a color that helps them stand out from your text.
-      */
-      .rightLowerColumnContent div a:link, .rightColumnLowerContent div a:visited{
-        /*@editable*/ color:#336699;
-        /*@editable*/ font-weight:normal;
-        /*@editable*/ text-decoration:underline;
-      }
-
-      .rightLowerColumnContent img{
-        display:inline;
-        height:auto;
-      }
-
-      /* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: FOOTER /\/\/\/\/\/\/\/\/\/\ */
-
-      /**
-      * @tab Footer
-      * @section footer style
-      * @tip Set the background color and top border for your email's footer area.
-      * @theme footer
-      */
-      #templateFooter{
-        /*@editable*/ background-color:#FFF;
-        /*@editable*/ border-top:0;
-      }
-
-      /**
-      * @tab Footer
-      * @section footer text
-      * @tip Set the styling for your email's footer text. Choose a size and color that is easy to read.
-      * @theme footer
-      */
-      .footerContent div{
-        /*@editable*/ color:#707070;
-        /*@editable*/ font-family:Arial;
-        /*@editable*/ font-size:12px;
-        /*@editable*/ line-height:125%;
-        /*@editable*/ text-align:center;
-      }
-
-      /**
-      * @tab Footer
-      * @section footer link
-      * @tip Set the styling for your email's footer links. Choose a color that helps them stand out from your text.
-      */
-      .footerContent div a:link, .footerContent div a:visited{
-        /*@editable*/ color:#336699;
-        /*@editable*/ font-weight:normal;
-        /*@editable*/ text-decoration:underline;
-      }
-
-      .footerContent img{
-      display:inline;
-      }
-
-      /**
-      * @tab Footer
-      * @section social bar style
-      * @tip Set the background color and border for your email's footer social bar.
-      * @theme footer
-      */
-      #social{
-      /*@editable*/ background-color:#FFF;
-      /*@editable*/ border:0;
-      }
-
-      /**
-      * @tab Footer
-      * @section social bar style
-      * @tip Set the background color and border for your email's footer social bar.
-      */
-      #social div{
-      /*@editable*/ text-align:center;
-      }
-
-      /**
-      * @tab Footer
-      * @section utility bar style
-      * @tip Set the background color and border for your email's footer utility bar.
-      * @theme footer
-      */
-      #utility{
-      /*@editable*/ background-color:#FFF;
-      /*@editable*/ border:0;
-      }
-
-      /**
-      * @tab Footer
-      * @section utility bar style
-      * @tip Set the background color and border for your email's footer utility bar.
-      */
-      #utility div{
-      /*@editable*/ text-align:center;
-      }
-
-      #monkeyRewards img{
-      max-width:190px;
-      }
-      .positionText {
-      color: #e4811c;
-      }
-      .spacerhidden {
-      color: #FFF;
-      }
-
-      #smallprint {
-      text-align: center;
-      color: #BFB6AE;
-      font-size: 11px;
-      }
       #tagline {
-      font-family: Georgia;
-      font-size: 13px;
-      line-height: 28px;
-      text-align: center;
-      color: #e4811c;
-      }
-      #unsub, #unsub a:link, #unsub a:visited {
-      text-align: center;
-      font-family: Arial;
-      font-size: 11px;
-      line-height: 15px;
-      text-align: center;
-      color: #bfb6ab;
-      text-decoration: none;
-      padding-bottom: 15px;
+        color: #e4811c;
+
+        font-family: Georgia;
+        font-size: 13px;
+        line-height: 28px;
+        text-align: center;
       }
 
-      div.c6 {text-align: center}
-      td.c5 {text-align:center;}
-      img.c4 {max-width:420px;}
-      img.c3 {max-width:540px;}
-      div.c2 {position: relative;}
+      #fineprint {
+        color: #BFB6AE;
+
+        font-size: 11px;
+
+        text-align: center;
+      }
+
+      a, a:link, a:visited {
+        color: #336699;
+        text-decoration: underline;
+        font-weight: normal;
+      }
     </style>
   </head>
+  <body>
 
-  <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
-    <div class="c6">
-      <table border="0" cellpadding="10" cellspacing="0" height="100%" width="100%" id=
-        "backgroundTable">
-        <tr>
-          <td align="center" valign="top">
-            <!-- // Begin Template Preheader \\ -->
-
-            <table border="0" cellpadding="10" cellspacing="0" width="600" id=
-              "templatePreheader">
-              <tr>
-                <td valign="top" class="preheaderContent">
-                  <!-- // Begin Module: Standard Preheader \ -->
-
-                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                    <tr>
-                      <!-- *|IFNOT:ARCHIVE_PAGE|* -->
-
-                      <td valign="top" width="500">
-                        <div mc:edit="std_preheader_links">
-                          Email not displaying correctly? <a href="*|ARCHIVE|*" target=
-                            "_blank">View it in your browser</a>.
-                        </div>
-                      </td><!-- *|END:IF|* -->
-                    </tr>
-                  </table><!-- // End Module: Standard Preheader \ -->
+    <table id="border" border="0" cellspacing="0" cellpadding="0" width="600">
+      <tr>
+        <td>
+          <table id="layout" border="0" cellspacing="0" cellpadding="0" width="590">
+            <tr>
+              <td id="header" colspan="2">
+                <img src="http://samdropbox.s3.amazonaws.com/liskow.png" />
+              </td>
+              <td id="locationsList">
+                <ul>
+                  <li>New Orleans</li>
+                  <li>Lafayette</li>
+                  <li>Houston</li>
                 </td>
               </tr>
-            </table><!-- // End Template Preheader \\ -->
 
-            <table border="0" cellpadding="0" cellspacing="0" width="600" id="borderTable">
               <tr>
-                <td>
-                  <table border="0" cellpadding="0" cellspacing="0" width="585" id= "templateContainer">
-                    <tr>
-                      <td align="center" valign="top">
-                        <!-- // Begin Template Header \\ -->
-
-                        <table border="0" cellpadding="0" cellspacing="0" width="585" id=
-                          "templateHeader">
-                          <tr>
-                            <td width="20" ><br />
-                            </td>
-                            <td width="410" class="headerContent"><br />
-                              <!-- // Begin Module: Standard Header Image \\ --> <a href=
-                                "http://liskow.com/"><img src=
-                                "http://samdropbox.s3.amazonaws.com/liskow.png"
-                                 id="headerImage campaign-icon" style="max-width: 410px;" /></a> 
-                              <!-- // End Module: Standard Header Image \\ --></td>
-
-                            <td width="200" valign="top" class="locationsList"><br />
-                              <a class="locationsList" href=
-                                "http://www.liskow.com/offices.aspx?id=20&amp;page=Offices+New+Orleans">
-                                New Orleans</a><br />
-                              <a class="locationsList" href=
-                                "http://www.liskow.com/offices.aspx?id=20&amp;page=Offices+Lafayette">
-                                Lafayette</a><br />
-                              <a class="locationsList" href=
-                                "http://www.liskow.com/offices.aspx?id=20&amp;page=Offices+Houston">
-                                Houston</a></td>
-                          </tr>
-                        </table><!-- // End Template Header \\ -->
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td align="center" valign="top">
-                        <!-- // Begin Template Body \\ -->
-
-                        <table border="0" cellpadding="0" cellspacing="0" width="585" id=
-                          "templateBody">
-                          <tr>
-                            <!-- // Begin Sidebar \\  -->
-
-                            <td valign="top" id="templateSidebar">
-                              <table border="0" cellpadding="0" cellspacing="0" width=
-                                "193">
-                                <tr>
-                                  <td valign="top" class="sidebarContent">
-                                    <!-- // Begin Module: Social Block with Icons \\ -->
-                                    <!-- // End Module: Social Block with Icons \\ -->
-                                    <!-- // Begin Module: Top Image with Content \\ -->
-                                    <!-- // End Module: Top Image with Content \\ --></td>
-                                </tr>
-                              </table>
-                            </td><!-- // End Sidebar \\ -->
-                          </tr>
-
-                          <tr>
-                            <td valign="top">
-                              <table border="0" cellpadding="0" cellspacing="0" width=
-                                "585">
-                                <tr>
-                                  <td valign="top" class="fullWidthBandContent">
-                                    <!-- // Begin Module: Standard Content \\ -->
-
-                                    <div class="c2"></div>
-
-                                    <table border="0" cellpadding="20" cellspacing="0" width="100%">
-                                      <tr>
-                                      </tr>
-                                      <tr>
-                                        <td valign="top"><img src=
-                                          "http://samdropbox.s3.amazonaws.com/message.png"
-                                          class="c3"
-                                          "tiwc200_image00" id="image_map" alt=
-                                          "Proudly Introducing Our New Shareholders, Of Counsel Attorney, And New Associate Attorneys." /></td>
-                                      </tr>
-                                    </table><!-- // End Module: Standard Content \\ -->
-                                  </td>
-                                </tr>
-                              </table>
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <td valign="top">
-                              <table width="540" border="0" cellpadding="0" cellspacing="0" id="columnsContainer">
-                                <tr>
-                                  <td valign="top" width="200" class=
-                                    "leftLowerColumnContent">
-                                    <!-- // Begin Module: Top Image with Content \\ -->
-
-                                    <table border="0" cellpadding="0" cellspacing="0"
-                                      width="100%">
-                                      <tr mc:repeatable="">
-                                        <td valign="top">
-                                          <div mc:edit="tiwc200_content03">
-                                            <p><span class= "positionText">Shareholders:</span><br />
-                                            <a href= "http://www.liskow.com/bio.aspx?id=67" target= "_blank"><strong>Carey L.  Menasco</strong></a><br />
-                                            &nbsp;&#8226;&nbsp;Business Litigation<br />
-                                            &nbsp;&#8226;&nbsp;Complex Business,<br />
-                                            <span class="spacerhidden">&nbsp;&#8226;&nbsp;</span>Bankruptcy and Utility<br />
-                                            <span class="spacerhidden">&nbsp;&#8226;&nbsp;</span>Litigation</p>
-
-                                            <p><a href=
-                                              "http://www.liskow.com/bio.aspx?id=106" target=
-                                              "_blank"><strong>Charles B.
-                                                Wilmore</strong></a><br />
-                                            &nbsp;&#8226;&nbsp;Environmental Law<br />
-                                            &nbsp;&#8226;&nbsp;Aviation, Toxic Tort and<br />
-                                            <span class="spacerhidden">&nbsp;&#8226;&nbsp;</span>Environmental Litigation</img><br />
-                                            &nbsp;&#8226;&nbsp;Maritime, Oilfield and<br />
-                                            <span class="spacerhidden">&nbsp;&#8226;&nbsp;</span>Insurance</img></p><br />
-                                          </div>
-                                        </td>
-                                      </tr>
-                                    </table>
-                                    <!-- // End Module: Top Image with Content \\ -->
-                                  </td>
-
-                                  <td valign="top" width="180" class=
-                                    "centerLowerColumnContent">
-                                    <!-- // Begin Module: Top Image with Content \\ -->
-
-                                    <table border="0" cellpadding="0" cellspacing="0"
-                                      width="100%">
-                                      <tr mc:repeatable="">
-                                        <td valign="top">
-                                          <div mc:edit="tiwc200_content04">
-                                            <p><span class="positionText">Of Counsel:</span><br />
-                                            <a href="http://www.liskow.com/bio.aspx?id=180"
-                                              target="_blank"><strong>Lesley Foxhall
-                                                Pietras</strong></a><br />
-                                            &nbsp;&#8226;&nbsp;Environmental Law</p>
-
-                                            <p><span class=
-                                              "positionText">Associates:</span><br />
-                                               <a href=
-                                              "http://www.liskow.com/bio.aspx?id=181" target=
-                                              "_blank"><strong>David P.
-                                                Curtis</strong></a><br />
-                                            &nbsp;&#8226;&nbsp;Energy Litigation<br />
-                                            &nbsp;&#8226;&nbsp;Business Litigation<br />
-                                            &nbsp;&#8226;&nbsp;Maritime, Oilfield and<br />
-                                            <span class="spacerhidden">&nbsp;&#8226;&nbsp;</span>Insurance</p>
-
-                                            <p><a href=
-                                              "http://www.liskow.com/bio.aspx?id=177" target=
-                                              "_blank"><strong>Erin L.
-                                                Delatte</strong></a><br />
-                                            &nbsp;&#8226;&nbsp;Business Litigation</p><br />
-                                          </div>
-                                        </td>
-                                      </tr>
-                                    </table>
-                                    <!-- // End Module: Top Image with Content \\ -->
-                                  </td>
-
-                                  <td valign="top" width="180" class=
-                                    "rightLowerColumnContent">
-                                    <!-- // Begin Module: Top Image with Content \\ -->
-
-                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                      <tr mc:repeatable="">
-                                        <td valign="top">
-                                          <div mc:edit="tiwc200_content05">
-                                            <p><a href=
-                                              "http://www.liskow.com/bio.aspx?id=176" target=
-                                              "_blank"><strong>James T.
-                                                Dunne</strong></a><br />
-                                            &nbsp;&#8226;&nbsp;Business Law<br />
-                                            &nbsp;&#8226;&nbsp;Real Estate Law</p>
-
-                                            <p><a href=
-                                              "http://www.liskow.com/bio.aspx?id=178" target=
-                                              "_blank"><strong>Carlos J.
-                                                Moreno</strong></a><br />
-                                            &nbsp;&#8226;&nbsp;Business Litigation<br />
-                                            &nbsp;&#8226;&nbsp;Energy Litigation<br />
-                                            &nbsp;&#8226;&nbsp;Environmental Law<br />
-                                            &nbsp;&#8226;&nbsp;Maritime, Oilfield and<br />
-                                            <span class="spacerhidden">&nbsp;&#8226;&nbsp;</span>Insurance</p>
-
-                                            <p><a href=
-                                              "http://www.liskow.com/bio.aspx?id=175" target=
-                                              "_blank"><strong>Megan Jordan
-                                                Spencer</strong></a><br />
-                                            &nbsp;&#8226;&nbsp;Environmental Law</p><br />
-                                          </div>
-                                        </td>
-                                      </tr>
-                                    </table>
-                                    <!-- // End Module: Top Image with Content \\ -->
-                                  </td>
-                                </tr>
-                              </table>
-                            </td>
-                          </tr>
-                        </table><!-- // End Template Body \\ -->
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td align="center" valign="top">
-                        <!-- // Begin Template Footer \\ -->
-
-                        <table border="0" cellpadding="0" cellspacing="0" width="540" id=
-                          "templateFooter">
-                          <tr>
-                            <td valign="top" class="footerContent">
-                              <!-- // Begin Module: Standard Footer \\ -->
-
-                              <table border="0" cellpadding="0" cellspacing="0" width=
-                                "100%">
-                                <tr>
-                                  <td valign="middle">
-                                    <div>
-                                      <span id="tagline">Tough Questions. Smart Answers.</span><br />
-                                      <span id="smallprint">A Professional Law Corporation; R. Keith Jarrett, Managing Partner</span><br />
-                                      <div id="unsub" style="text-align: center; ">
-                                        <a href="*|UNSUB|*">unsubscribe from this list</a> | <a href="*|UPDATE_PROFILE|*">update subscription preferences</a> | <a href="*|ARCHIVE|*">view email in browser</a></div><br />
-                                  </td>
-                                </tr>
-                              </table><!-- // End Module: Standard Footer \\ -->
-                            </td>
-                          </tr>
-                        </table><!-- // End Template Footer \\ -->
-                      </td>
-                    </tr>
-                  </table>
+                <td id="content" colspan="3">
+                  <img src= "http://samdropbox.s3.amazonaws.com/message.png" alt= "Proudly Introducing Our New Shareholders, Of Counsel Attorney, And New Associate Attorneys." />
                 </td>
               </tr>
+
+              <tr id="columncontainer">
+                <td class="column" id="firstColumn" valign="top">
+                  <span class="listTitle">Shareholders:</span><br />
+                  <span class="name"><a href="#">Carey L. Menasco</a></span>
+                  <ul>
+                    <li>Business Litigation</li>
+                    <li>Complex Business, Bankruptcy and Utility Litigation</li>
+                  </ul>
+
+                  <span class="name"><a href="#">Charles B. Wilmore</a></span>
+                  <ul>
+                    <li>Environmental Law</li>
+                    <li>Aviation, Toxic Tort and Environmental Litigation</li>
+                    <li>Maritime, Oilfeild and Insurance</li>
+                  </ul>
+                </td>
+
+                <td class="column" id="secondColumn" valign="top">
+                  <span class="listTitle">Of Counsel:</span><br />
+                  <span class="name"><a href="#">Lesley Foxhall Pietras</a></span>
+                  <ul>
+                    <li>Environmental Law</li>
+                  </ul>
+
+                  <span class="listTitle">Associates:</span><br />
+                  <span class="name"><a href="#">David P. Curtis</a></span>
+                  <ul>
+                    <li>Energy Litigation</li>
+                    <li>Business Litigation</li>
+                    <li>Maritime, Oilfield and Insurance</li>
+                  </ul>
+
+                  <span class="name"><a href="#">Erin L. Delatte</a></span>
+                  <ul>
+                    <li>Business Litigation</li>
+                  </ul>
+                </td>
+
+                <td class="column" id="thirdColumn" valign="top">
+                  <span class="name"><a href="#">James T. Dunne</a></span>
+                  <ul>
+                    <li>Business Law</li>
+                    <li>Real Estate Law</li>
+                  </ul>
+
+                  <span class="name"><a href="#">Carlos J. Moreno</a></span>
+                  <ul>
+                    <li>Business Litigation</li>
+                    <li>Energy Litigation</li>
+                    <li>Environmental Law</li>
+                    <li>Maritime, Oilfield and Insurance</li>
+                  </ul>
+
+                  <span class="name"><a href="#">Megan Jordan Spencer</a></span>
+                  <ul>
+                    <li>Environmental Law</li>
+                  </ul>
+                </td>
+              </tr>
+
+              <tr>
+                <td id="footer" colspan="3">
+                  <span id="tagline">Tough Questions. Smart Answers.</span><br />
+                  <span id="fineprint">A Professional Law Corporation; R. Keith Jarrett, Managing Partner</span><br /><br />
+                  g       <span><a href="*|ARCHIVE|*" class="adminText">view email in browser</a> | <a href="*|UNSUB|*">Unsubscribe</a> *|EMAIL|* | <a href="*|UPDATE_PROFILE|*">Update your profile</a> | <a href="*|FORWARD|*">Forward to a friend</a></span>
+                </td>
+              </tr>
+
             </table>
           </td>
         </tr>
       </table>
-    </div>
-  </body>
-</html>
+    </body>
+  </html>
 
